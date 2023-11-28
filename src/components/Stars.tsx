@@ -1,12 +1,17 @@
+import React from "react";
 import Star from "./Star";
 
-const Stars = ({ count }) => {
-    const starsLength = count > 0 && count <= 5 ? true : false;
-    let starsArray = [];
+type PropsStars = {
+    count: number;
+}
 
+const Stars: React.FC<PropsStars> = ({ count }) => {
+    const starsLength = count > 0 && count <= 5 ? true : false;
+    let starsArray: number[] = [];
+    
     for (let i = 0; i < count; i++) {
         starsArray.push(1);
-    }
+    }   
 
 
     return (
